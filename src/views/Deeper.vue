@@ -1,5 +1,5 @@
 <template lang="pug">
-  div(class="about")
+  div(class="deeper")
     h2 Welcome to VueJs
 </template>
 
@@ -10,25 +10,31 @@ export default {
   components: {},
   props: {},
   data(){
-    return {};
+    return {
+      sampleData: null,
+    };
   },
   computed: {},
   asyncComputed: {},
   methods: {},
-  watch: {},
+  watch: { // Defined functions execute when changes happen to the corresponding data variables
+    sampleData() {
+      // Do the thing
+    }
+  },
   beforeCreate() {},
   created() {},
   beforeMount() {},
   mounted() {},
-  beforeUpdate() {},
-  updated() {},
-  beforeDestroy() {},
-  destroyed() {},
+  beforeUpdate() {}, // Triggered immediately before ANY DOM updates
+  updated() {}, // Triggered immedaitely after ANY DOM updates
+  beforeDestroy() {}, // Going, going, going!
+  destroyed() {}, // Uh-oh all gone
 }
 </script>
 
 <style lang="sass">
-.about
+.deeper
   display: flex
   flex-direction: column
   justify-content: center
